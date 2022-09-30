@@ -1,0 +1,237 @@
+
+body{
+    
+}
+header{
+    
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-image: url("img/header.jpg");
+    height: 22.9rem;
+    background-position: center;
+    width: 100%;
+    display: inline-block;
+    flex-grow: 1;
+    margin-top: 0;
+    padding-top: 0;
+}
+footer{
+    position: relative;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    background: lightgrey;
+    text-align: center;
+    padding-top: 5px;
+    
+}
+.logo{
+    margin-top: 3%;
+    animation: leftMove 2s linear;
+}
+.menu{
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.main-menu{
+    color: grey;
+    text-decoration: none;
+    font-size: large;
+    margin: 5.5%;
+    padding: 2px;
+    flex-grow: 1;
+    animation: static 2s ease;
+}
+.social-media{
+    float: right;
+    flex-grow: 1;
+    margin-top: 6%;
+    margin-right: 2%;
+}
+section{
+    margin-top: 10px;
+    display:flex;
+    justify-content: space-evenly;
+    flex-grow: 1;
+}
+.main_articles{
+    background-color: lightgrey;
+    display:flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 75%;
+}
+.second_article{
+    background-color: lightgrey;
+    margin-left: 5px;
+    padding: 7px;
+    width: 25%;
+    text-align: center;
+    
+}
+nav .title1{
+    text-align: center;
+    color:orangered;
+    margin-left: 7%;
+    margin-right: 7%;
+    background-color: lightgrey;
+    padding-top: 2%;
+    padding-bottom: 4.2%;
+    opacity: 50%;
+    animation: vanish 2s;
+}
+.last{
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+section .gastronomia .title,
+section .cultura .title,
+section .turismo .title,
+section .vida-nocturna .title{
+    background-color: rgb(243, 154, 169);
+    color: white;
+    margin-top: 0;
+    padding-left: 10px;
+}
+.gastronomia,
+.cultura,
+.turismo,
+.vida-nocturna{
+    width: 45%;
+    height: fit-content;
+    background-color: rgb(234, 228, 228);
+    margin: 10px;
+    padding: 7px;
+}
+section .turismo .text,
+section .vida-nocturna .text,
+section .gastronomia .text,
+section .cultura .text{
+    column-count: 2;
+}
+a{
+    cursor: pointer ;
+}
+@keyframes leftMove{
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+@keyframes vanish{
+    100%{
+        opacity: 0.5;
+    }
+    0%{
+        opacity: 0; 
+    }
+}
+@keyframes static{
+    0%{
+        transform: translateX(-2px);
+    }
+    50%{
+        transform: translateY(-2px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1280px){
+    .main-menu{
+        color: grey;
+        text-decoration: none;
+        font-size: medium;
+        width: fit-content;
+        justify-content: space-between;
+        margin: 0;
+        padding-top: 7%;
+        
+    } 
+    .social-media{
+        padding-top: 0.7%;
+    }
+    .gastronomia,
+    .cultura,
+    .turismo,
+    .vida-nocturna{
+        width: 45%;
+        height: fit-content;
+        background-color: rgb(234, 228, 228);
+    }
+    nav .title1{
+        padding-left: 110px;
+        padding-right  : 110px;
+        
+        margin-top: 10%;
+        text-align: center;
+        padding-top: 5%;
+    }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+    header{
+        display:flex;
+        flex-wrap: wrap;
+        background-image: url("img/header.jpg");
+        height: 15rem;
+        background-position: center;
+        display: flex;
+        width: fit-content;
+    }
+    .main-menu{
+        color: grey;
+        text-decoration: none;
+        font-size: medium;
+        width: fit-content;
+        text-align: center;
+        flex-grow: 1;
+        justify-content: space-between;
+        margin: 0;
+        padding-top: 15%;
+        
+        
+    }
+    .gastronomia,
+    .cultura,
+    .turismo,
+    .vida-nocturna{
+        width: 60%;
+        height: fit-content;
+        background-color: rgb(234, 228, 228);
+        
+    }
+    .main_articles{
+        display: flex;
+        width:100%;
+        
+    }
+    nav .title1{
+        padding-left: 110px;
+        padding-right  : 110px;
+        padding-bottom: 10px;
+    }
+    .social-media{
+        padding-top: 9%;
+    }
+    section{
+        margin-top: 5%;
+        display:flex;
+        flex-wrap: wrap;
+    }
+    .second_article{
+        margin: 0;
+        padding: 5%;
+        margin-top: 4%;
+        width: 100%;
+    }
+}
